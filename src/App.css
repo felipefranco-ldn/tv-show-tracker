@@ -1,5 +1,28 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.section1 > div {
+  display: flex;
+  width: 900px;
+  flex-wrap: wrap;
+  height: 500px;
+}
+
+.list > div {
+  width: 250px;
+}
+
+.section2 {
+  width: 400px;
 }
 
 .App-logo {
