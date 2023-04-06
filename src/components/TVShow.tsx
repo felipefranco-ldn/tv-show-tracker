@@ -1,4 +1,3 @@
-import { Component } from "react";
 import "../data/tv-shows.json";
 
 export interface TVShowProps {
@@ -9,61 +8,73 @@ export interface TVShowProps {
   airingDate: string;
 }
 
-export interface TVShowState {
-  title: string;
-  genre: string;
-  rating: number;
-  status: string;
-  airingDate: string;
-}
+/**
+ * It's not necessary for this class to be a React component as you're not rendering anything
+ * to the screen. Although I can see that this was made to be reactive, you could use this
+ * more as a way to define your structure than a component. Think like you're using plain objects!
+ * {
+ *   title: "The Office",
+ *   genre: "Comedy",
+ *   rating: 8.9,
+ *   status: "Completed",
+ *   airingDate: "2005-03-24"
+ * }
+ */
 
-export default class TVShow extends Component<TVShowProps, TVShowState> {
+export default class TVShow {
+  private _title: string;
+  private _genre: string;
+  private _rating: number;
+  private _status: string;
+  private _airingDate: string;
+
   constructor(props: TVShowProps) {
-    super(props);
-    this.state = {
-      title: props.title,
-      genre: props.genre,
-      rating: props.rating,
-      status: props.status,
-      airingDate: props.airingDate,
-    };
+    this._title = props.title;
+    this._genre = props.genre;
+    this._rating = props.rating;
+    this._status = props.status;
+    this._airingDate = props.airingDate;
   }
 
-  setTitle = (title: string) => {
-    this.setState({ title });
-  };
-  setGenre = (genre: string) => {
-    this.setState({ genre });
-  };
-  setRating = (rating: number) => {
-    this.setState({ rating });
-  };
-  setStatus = (status: string) => {
-    this.setState({ status });
-  };
-  setAiringDate = (airingDate: string) => {
-    this.setState({ airingDate });
-  };
+  set title(title: string) {
+    this._title = title;
+  }
 
-  getTitle = (): string => {
-    return this.state.title;
-  };
+  set genre(genre: string) {
+    this._genre = genre;
+  }
 
-  getGenre = (): string => {
-    return this.state.genre;
-  };
+  set rating(rating: number) {
+    this._rating = rating;
+  }
 
-  getRating = (): number => {
-    return this.state.rating;
-  };
+  set status(status: string) {
+    this._status = status;
+  }
 
-  getStatus = (): string => {
-    return this.state.status;
-  };
+  set airingDate(airingDate: string) {
+    this._airingDate = airingDate;
+  }
 
-  getAiringDate = (): string => {
-    return this.state.airingDate;
-  };
+  get title(): string {
+    return this._title;
+  }
+
+  get genre(): string {
+    return this._genre;
+  }
+
+  get rating(): number {
+    return this._rating;
+  }
+
+  get status(): string {
+    return this._status;
+  }
+
+  get airingDate(): string {
+    return this._airingDate;
+  }
 
   static genres: string[] = ["Crime", "Fantasy", "Comedy", "Sci-Fi", "Action"];
 

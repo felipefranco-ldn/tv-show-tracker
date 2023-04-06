@@ -8,8 +8,8 @@ type SearchShows = {
 export const searchShows: SearchShows = (searchTerm: string) => {
   return shows.filter(
     (show) =>
-      show.getGenre() === searchTerm ||
-      show.getTitle() === searchTerm ||
-      show.getStatus() === searchTerm
+      show.genre === searchTerm ||
+      show.title === searchTerm ||
+      show.status === searchTerm
   );
 };

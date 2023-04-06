@@ -5,16 +5,16 @@ export const renderShows = () => {
   return (
     <div className="list">
       {shows.map((show: TVShow) => (
-        <div key={show.getTitle()}>
-          <strong>Title:</strong> {show.getTitle()}
+        <div key={show.title}>
+          <strong>Title:</strong> {show.title}
           <br />
-          <strong>Genre:</strong> {show.getGenre()}
+          <strong>Genre:</strong> {show.genre}
           <br />
-          <strong>Rating:</strong> {show.getRating()}
+          <strong>Rating:</strong> {show.rating}
           <br />
-          <strong>Status:</strong> {show.getStatus()}
+          <strong>Status:</strong> {show.status}
           <br />
-          <strong>Airing Date:</strong> {show.getAiringDate()}
+          <strong>Airing Date:</strong> {show.airingDate}
           <br />
           <br />
           <br />

@@ -6,5 +6,5 @@ type FilterByGenre = {
 };
 
 export const filterByGenre: FilterByGenre = (genre: string) => {
-  return shows.filter((show) => show.getGenre() === genre);
+  return shows.filter((show) => show.genre === genre);
 };

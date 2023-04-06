@@ -5,7 +5,7 @@ type RemoveShow = {
 };
 
 export const removeShow: RemoveShow = (title: string) => {
-  const showToRemove = shows.find((show) => show.getTitle() === title);
+  const showToRemove = shows.find((show) => show.title === title);
   if (showToRemove) {
     const indexOfShowToRemove = shows.indexOf(showToRemove);
     shows.splice(indexOfShowToRemove, 1);

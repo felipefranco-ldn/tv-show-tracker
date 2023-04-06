@@ -5,9 +5,7 @@ describe("removeShow", () => {
   it("should remove a show using title", () => {
     const titleToRemove: string = "Friends";
     removeShow(titleToRemove);
-    expect(shows.find((show) => show.getTitle() === titleToRemove)).toBe(
-      undefined
-    );
+    expect(shows.find((show) => show.title === titleToRemove)).toBe(undefined);
   });
 
   it("should not remove a show if title does not match", () => {
