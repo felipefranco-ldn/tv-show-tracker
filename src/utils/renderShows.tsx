@@ -1,7 +1,7 @@
 import { shows } from "./loadShows";
 import TVShow from "../components/TVShow";
 
-export const renderShows = () => {
+export const RenderShows = () => {
   return (
     <div className="list">
       {shows.map((show: TVShow) => (
