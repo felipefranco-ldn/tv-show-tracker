@@ -1,6 +1,7 @@
 import { shows } from "./loadShows";
 import TVShow from "../components/TVShow";
-
+// May 5th - Instead of having a break, use OL/UL (ordered list, unordered list)
+//Better to handle Shows elements are not present, so no records are found
 export const RenderShows = () => {
   return (
     <div className="list">

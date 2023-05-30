@@ -20,6 +20,8 @@ export interface TVShowState {
 export default class TVShow extends Component<TVShowProps, TVShowState> {
   constructor(props: TVShowProps) {
     super(props);
+    //May 5th - Define an interface this.stage:TVShowState and add default values
+    // while accessing the state values, use spread operator 
     this.state = {
       title: props.title,
       genre: props.genre,

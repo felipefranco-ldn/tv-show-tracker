@@ -1,5 +1,5 @@
 import { shows } from "./loadShows";
-
+// May 5th - I think we are not using this method, better to remove/ delete file 
 type RemoveShow = {
   (title: string): void;
 };
