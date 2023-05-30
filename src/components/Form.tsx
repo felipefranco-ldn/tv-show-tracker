@@ -13,7 +13,7 @@ export const TVShowForm = () => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    // May 5th, you can use terenary operator here
+    // May 5th, you can use ternary operator here
     if (name === "rating") {
       setShow({
         ...show,

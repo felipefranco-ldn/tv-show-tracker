@@ -7,7 +7,7 @@ export const displayShows = (
   key: keyof TVShowProps,
   order: "asc" | "desc"
 ): TVShowProps[] => {
-//May - 5th name=='asc' Instead of If else condition, use terinary Operator"
+//May - 5th name=='asc' Instead of If else condition, use ternary Operator"
 // example: order=name==''asc"?sort(): sort().reverse()
   if (order === "asc") {
     // spread array to avoid mutating original instance
