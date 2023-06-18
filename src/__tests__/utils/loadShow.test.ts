@@ -10,10 +10,10 @@ describe("loadShows", () => {
   it("should return an element with all correct keys and values", () => {
     const showInLoadedShows = loadShows()[0];
     const showInShowsData = TVShowsData[0];
-    expect(showInLoadedShows.getTitle()).toBe(showInShowsData.title);
-    expect(showInLoadedShows.getGenre()).toBe(showInShowsData.genre);
-    expect(showInLoadedShows.getRating()).toBe(showInShowsData.rating);
-    expect(showInLoadedShows.getStatus()).toBe(showInShowsData.status);
-    expect(showInLoadedShows.getAiringDate()).toBe(showInShowsData.airingDate);
+    expect(showInLoadedShows.title).toBe(showInShowsData.title);
+    expect(showInLoadedShows.genre).toBe(showInShowsData.genre);
+    expect(showInLoadedShows.rating).toBe(showInShowsData.rating);
+    expect(showInLoadedShows.status).toBe(showInShowsData.status);
+    expect(showInLoadedShows.airingDate).toBe(showInShowsData.airingDate);
   });
 });

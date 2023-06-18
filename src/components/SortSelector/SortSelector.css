@@ -1,0 +1,48 @@
+.sort-selector-container {
+  width: 280px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin: 0 0 30px 0;
+}
+
+.selector-menu {
+  width: 200px;
+  font-family: "Avenir", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0, 140, 140, 0.1);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+  padding: 0 10px;
+  height: 30px;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+}
+
+.selector-menu-inactive {
+  width: 200px;
+  font-family: "Avenir", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0, 140, 140, 0.1);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+  padding: 0 10px;
+  height: 30px;
+  margin: 10px 0 0 0;
+}
+
+.bottom-container {
+  margin: 30px 0 0 0;
+}
+
+.bottom-container-inactive {
+  margin: 30px 0 0 0;
+  opacity: 0.3;
+}

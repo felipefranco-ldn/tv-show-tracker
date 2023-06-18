@@ -1,17 +1,20 @@
-import { TVShowProps } from "../components/TVShow";
+import { TVShow, TVShowProps } from "./TVShow";
 import TVShowsData from "../data/tv-shows.json";
-import TVShow from "../components/TVShow";
 
-export const loadShows = (): TVShow[] => {
-  return TVShowsData.map((show: TVShowProps) => {
+export const loadShows = (): TVShowProps[] => {
+  const mappedData: any = TVShowsData.map((show: TVShowProps) => {
+    const { title, genre, rating, status, airingDate } = show;
+
     return new TVShow({
-      title: show.title,
-      genre: show.genre,
-      rating: show.rating,
-      status: show.status,
-      airingDate: show.airingDate,
+      title: title,
+      genre: genre,
+      rating: rating,
+      status: status,
+      airingDate: airingDate,
     });
   });
+
+  return mappedData;
 };
 
-export const shows = loadShows();
+export const shows: TVShowProps[] = loadShows();

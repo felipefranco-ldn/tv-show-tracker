@@ -1,19 +1,19 @@
 import { removeShow } from "../../utils/removeShow";
-import { shows } from "../../utils/loadShows";
+import showsData from "../../data/tv-shows.json";
 
 describe("removeShow", () => {
   it("should remove a show using title", () => {
     const titleToRemove: string = "Friends";
-    removeShow(titleToRemove);
-    expect(shows.find((show) => show.getTitle() === titleToRemove)).toBe(
+    removeShow(showsData, titleToRemove);
+    expect(showsData.find((show) => show.title === titleToRemove)).toBe(
       undefined
     );
   });
 
   it("should not remove a show if title does not match", () => {
     const titleToRemove: string = "ABCD";
-    const originalArrayLength = shows.length;
-    removeShow(titleToRemove);
-    expect(shows.length).toBe(originalArrayLength);
+    const originalArrayLength = showsData.length;
+    removeShow(showsData, titleToRemove);
+    expect(showsData.length).toBe(originalArrayLength);
   });
 });
