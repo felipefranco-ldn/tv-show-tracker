@@ -1,13 +1,6 @@
-import { shows } from "./loadShows";
-import TVShow from "../components/TVShow";
+import { TVShowProps } from "./TVShow";
 
-type FilterByGenre = {
-  (genre: string): TVShow[] | [];
-};
-//May 5th
-//Arrow function example:
-//export const filterByGenre: FilterByGenre = (genre: string) => shows.filter((show) => show.getGenre() === genre);
-//;
-export const filterByGenre: FilterByGenre = (genre: string) => {
-  return shows.filter((show) => show.getGenre() === genre);
+export const filterByGenre = (shows: TVShowProps[], genre: string) => {
+  const filtered = shows.filter((show) => show.genre === genre);
+  return filtered;
 };

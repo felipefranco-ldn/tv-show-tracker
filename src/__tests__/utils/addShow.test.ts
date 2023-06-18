@@ -1,7 +1,7 @@
 import { addShow } from "../../utils/addShow";
 import { shows } from "../../utils/loadShows";
-import TVShow from "../../components/TVShow";
-import { TVShowProps } from "../../components/TVShow";
+import { TVShow } from "../../utils/TVShow";
+import { TVShowProps } from "../../utils/TVShow";
 
 describe("addShow", () => {
   it("should add a new show using instance of class", () => {

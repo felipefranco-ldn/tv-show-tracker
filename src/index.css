@@ -1,13 +1,23 @@
+/* Resets */
+
+/* Font size reset to base 10 (10px) in order to */
+/* make relative font size calculations easier */
+
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Avenir", sans-serif;
+  background: #e8e8e8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* if box sizing is changed to content-box, please inherit box-sizing from the parent */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
+
+/* End of resets */

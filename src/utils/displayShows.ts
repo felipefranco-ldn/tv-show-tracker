@@ -1,25 +1,19 @@
 import { compareShows } from "./compareShows";
-import TVShowsData from "../data/tv-shows.json";
-import { TVShowProps } from "../components/TVShow";
-// import TVShow from "../components/TVShow";
+import { TVShowProps } from "./TVShow";
 
 export const displayShows = (
-  key: keyof TVShowProps,
-  order: "asc" | "desc"
+  shows: TVShowProps[],
+  key: keyof TVShowProps = "title",
+  order?: string
 ): TVShowProps[] => {
-//May - 5th name=='asc' Instead of If else condition, use ternary Operator"
-// example: order=name==''asc"?sort(): sort().reverse()
-  if (order === "asc") {
-    // spread array to avoid mutating original instance
-    const sortedShowsAsc = [...TVShowsData].sort((a, b) =>
-      compareShows(a, b, key)
-    );
-    //   console.log("sortedShowsAsc")
-    return sortedShowsAsc;
+  let sortedShowsAsc;
+  if (order === "asc" || order === "desc") {
+    sortedShowsAsc = [...shows].sort((a, b) => compareShows(a, b, key));
   }
-  // spread array to avoid mutating original instance
-  const sortedShowsDesc = [...TVShowsData]
-    .sort((a, b) => compareShows(a, b, key))
-    .reverse();
-  return sortedShowsDesc;
+
+  if (sortedShowsAsc) {
+    return order === "asc" ? sortedShowsAsc : sortedShowsAsc.reverse();
+  }
+
+  return shows;
 };

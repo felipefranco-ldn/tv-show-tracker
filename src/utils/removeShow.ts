@@ -1,13 +1,10 @@
-import { shows } from "./loadShows";
-// May 5th - I think we are not using this method, better to remove/ delete file 
-type RemoveShow = {
-  (title: string): void;
-};
+import { TVShowProps } from "./TVShow";
 
-export const removeShow: RemoveShow = (title: string) => {
-  const showToRemove = shows.find((show) => show.getTitle() === title);
+export const removeShow = (shows: TVShowProps[], title: string) => {
+  const showToRemove = shows.find((show) => show.title === title);
   if (showToRemove) {
     const indexOfShowToRemove = shows.indexOf(showToRemove);
     shows.splice(indexOfShowToRemove, 1);
   }
+  return shows;
 };
